@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.clock {
+  background-color: #404956;
+  color: #ffffff;
+  text-align: center;
+  width: 50%;
+  margin: 3em auto;
+}
+
+.clock h1 {
+  margin-bottom: 1em;
+}
+
+.clock__face {
+  margin: 0 auto;
+  background: #7b4474;
+}
+
+.clock__face,
+.clock svg {
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.clock__hand {
+  stroke-dasharray: 100 0;
+  transition: stroke-dashoffset 0.5s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.clock #seconds {
+  color: #E1E29A;
+}
+
+.clock #minutes {
+  color: #D99B7B;
+}
+
+.clock #hours {
+  color: #D0535C;
+}

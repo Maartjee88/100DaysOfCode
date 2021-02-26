@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  $white: #ffffff;
+  $green: #E1E29A;
+  $peach: #D99B7B;
+  $purple: #7b4474;
+  $pink: #D0535C;
+  $black: #404956;
+  
+  .clock {
+    background-color: $black;
+    color: $white;
+    text-align: center;
+    width: 50%;
+    margin: 3em auto;
+  
+    h1 {
+      margin-bottom: 1em;
+    }
+  
+    &__face {
+      margin: 0 auto;
+      background: $purple;
+    }
+  
+    &__face,
+    svg {
+      position: absolute;
+      left: 50%;
+      margin-left: -100px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+    }
+  
+    &__hand {
+      stroke-dasharray: 100 0;
+      transition: stroke-dashoffset 0.5s;
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+    }
+  
+    #seconds {
+      color: $green;
+    }
+  
+    #minutes {
+      color: $peach;
+    }
+  
+    #hours {
+      color: $pink;
+    }
+  }
+  
