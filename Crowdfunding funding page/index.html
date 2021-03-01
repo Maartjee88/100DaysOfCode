@@ -5,16 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Crowdfunding product page</title>
+  
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
   <nav>
-    <div class="logo"><img src="./images/logo.svg"></div>
-    <div>
-      <ul class="li">About</ul>
-      <ul class="li">Discover</ul>
-      <ul class="li">Get Started</ul>
+    <div class="grid">
+      <div class="grid__col grid__col--1-of-2 grid__col--s-1-of-2">
+        <div class="logo"><img src="./images/logo.svg"></div>
+      </div>
+      <div class="grid__col grid__col--1-of-2 grid__col--s-1-of-2">
+        <button class="btn btn__menu">
+          <img src="./images/icon-hamburger.svg" alt="hamburger menu">
+        </button>
+
+        <div class="main-nav">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#discover">Discover</a></li>
+            <li><a href="#get-started">Get Started</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </nav>
   <main>
@@ -22,25 +35,37 @@
       <header class="hero__image">
         <picture>
           <source media="(min-width:768px)" srcset="./images/image-hero-desktop.jpg">
-          <source media="(min-width:375px)" srcset="./images/image-hero-mobile.jpg">
+          <source media="(min-width:320px)" srcset="./images/image-hero-mobile.jpg">
           <img src="./images/image-hero-desktop.jpg" alt="Mastercraft Monitor Riser" style="width:auto;">
         </picture>
       </header>
       <section class="summary">
-        <h1>Mastercraft Bamboo Monitor Riser</h1>
-        <div class="subtitle">
-          A beautiful & handcrafted monitor stand to reduce neck and eye strain.
+        <div class="grid">
+          <div class="intro">
+            <h1>Mastercraft Bamboo Monitor Riser</h1>
+            <div class="subtitle">
+              A beautiful & handcrafted monitor stand to reduce neck and eye strain.
+            </div>
+            
+            <button class="btn btn--primary">Back this project</button>
+            <button class="btn btn--black btn--small">Bookmark</button>
+          </div>
         </div>
 
-        <button class="btn btn--primary">Back this project</button>
-        <button class="btn btn--black btn--small">Bookmark</button>
-
-        <div class="overview">
-          <div class="overview__fact"><span>$89,914</span> of $100,000 backed</div>
-          <div class="overview__fact"><span>5,007</span> total backers</div>
-          <div class="overview__fact"><span>56</span> days left</div>
-          
-          <div id="progressbar"></div>
+        <div class="grid">
+          <div class="overview">
+            <div class="grid__col grid__col--1-of-3">
+              <div class="overview__fact"><span>$89,914</span> of $100,000 backed</div>
+            </div>
+            <div class="grid__col grid__col--1-of-3">
+              <div class="overview__fact"><span>5,007</span> total backers</div>
+            </div>
+            <div class="grid__col grid__col--1-of-3">
+              <div class="overview__fact"><span>56</span> days left</div>
+            </div>
+            
+            <div id="progressbar"></div>
+          </div>
         </div>
       </section>
 
@@ -177,5 +202,6 @@
       <!-- Start modalblock - success -->
     </article>
   </main>
+  <script src="./assets/js/scripts.js"></script>
 </body>
 </html>
