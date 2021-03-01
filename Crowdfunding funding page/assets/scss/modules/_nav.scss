@@ -1,19 +1,32 @@
 nav {
   position: absolute;
+  display: block;
   top: 0;
-  left: 0;
-  right: 0;
+  color: $white;
+  margin: 0 auto;
+  padding: 1em 2em;
+  width: 100%;
+  max-width: $desktop;
 
   .logo {
-    width: 10%;
     display: inline-block;
   }
 
   .main-nav {
-    display: inline-block;
+    color: red;
+  }
 
-    ul li {
-      display: inline-block;
+  @include respond-to("desktop") {
+    color: blue;
+
+    .main-nav {
+      display: flex;
+      justify-content: flex-end;
+
+      ul li {
+        display: inline-flex;
+        margin: 0 0.4em;
+      }
     }
   }
 }
